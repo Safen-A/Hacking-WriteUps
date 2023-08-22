@@ -7,8 +7,7 @@ Keeper ist eine Saisonale Maschine die in der Open Beta Season II gespielt wurde
 > OS : Linux
 > Points: 20
 
-	![[Screenshot_Keeper_1.png]]
-
+<img src="../Screenshots/Screenshot_Keeper_1.png" width=500>
 
 
 ## Recherche (Reconnaissance)
