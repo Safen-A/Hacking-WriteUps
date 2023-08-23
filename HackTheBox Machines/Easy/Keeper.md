@@ -7,7 +7,7 @@ Keeper ist eine Saisonale Maschine die in der Open Beta Season II gespielt wurde
 > OS : Linux
 > Points: 20
 
-<img src="../Screenshots/Screenshot_Keeper_1.png" width=500>
+<img src="../Screenshots/Screenshot_Keeper_1.png" width=800>
 
 
 ## Recherche (Reconnaissance)
@@ -29,7 +29,7 @@ Hier ist eine Zusammenfassung der offenen Ports, die während des Nmap-Scans ent
 - Port 80: HTTP (Hypertext Transfer Protocol)
 
 
-![[Screenshot_Keeper_2.png]]
+<img src="../Screenshots/Screenshot_Keeper_2.png" width=800>
 
 
 Nach der Identifizierung der offenen Ports wurde ein Webbrowser geöffnet, um die erreichbaren Webseiten zu erkunden. Dabei wurde festgestellt, dass es einen Verweis auf `tickets.keeper.htb/rt` gibt. Um darauf zuzugreifen, wurde die Datei `/etc/hosts` bearbeitet:
@@ -38,7 +38,7 @@ Nach der Identifizierung der offenen Ports wurde ein Webbrowser geöffnet, um di
 sudo echo "IP_ADRESS    tickets.keeper.htb" > /etc/hosts
 ```
 
-![[Screenshot_Keeper_3.png]]
+<img src="../Screenshots/Screenshot_Keeper_3.png" width=800>
 
 Anschließend wurde eine Anmeldeseite entdeckt. Bevor jedoch die Seite analysiert wurde, wurde ein Skript-Scan auf den gefundenen Ports mit folgendem Befehl durchgeführt:
 
@@ -47,8 +47,7 @@ nmap -sC -sV -O -p22,80 IP_ADRESS
 ```
 > Dieser Scan hat auch keine Zielführende Informationen gegeben.
 
-Nach einer sorgfältigen Prüfung der Webseite wurde festgestellt, dass sie auf ungewöhnliche Unterverzeichnisse verweist. Durch die Anwendung des Tools "gobuster" wurde eine Untersuchung verschiedener Unterverzeichnisse durchgeführt. Dabei wurden Fehler geworfen, da bei jeder Anfrage der Server mit unterschiedlichen Fehlern Antwortete und verwies auf randomisierte Unterverzeichnisse die nicht existierten, beispiel: 
-`http://tickets.keeper.htb/rt/id=sdf3bbdsiz3vzv`. Der Seitenquelltext und eine mögliche SQL-Injektion Schwachstellen zu identifizieren. Hierbei kam auch das Tool "sqlmap" zum Einsatz, ohne Erfolg.
+Nach einer sorgfältigen Prüfung der Webseite wurde festgestellt, dass sie auf ungewöhnliche Unterverzeichnisse verweist. Durch die Anwendung des Tools "gobuster" wurde eine Untersuchung verschiedener Unterverzeichnisse durchgeführt. Dabei wurden Fehler geworfen, da bei jeder Anfrage der Server mit unterschiedlichen Fehlern Antwortete und verwies auf randomisierte Unterverzeichnisse. Der Seitenquelltext und eine mögliche SQL-Injektion Schwachstellen zu identifizieren wurde versucht. Hierbei kam auch das Tool "sqlmap" zum Einsatz, ohne Erfolg.
 
 Trotz diverser Herangehensweisen erwiesen sich diese Bemühungen als ergebnislos. Infolgedessen wurde das Tool OWASP-ZAP verwendet, um weitere Schwachstellen zu erkennen. Allerdings konnte keine bedeutende Schwachstelle gefunden werden, die ausgenutzt werden könnte.
 
@@ -56,13 +55,13 @@ Daraufhin wurde die Entscheidung getroffen, einen Brute-Force-Angriff auf die Be
 
 Das Ergebnis des Brute Force Angriffs mit dem OWASP-ZAP Fuzzer gab nach kürzester Zeit einen Treffer:`root:password`
 
-![[Screenshot_Keeper_4.png]]
+<img src="../Screenshots/Screenshot_Keeper_4.png" width=800>
 
 Nach erfolgreicher Anmeldung mit den bereitgestellten Anmeldedaten wurde nach begutachten der Seite ein Benutzer `longaard` gefunden, bei den Kommentaren über diesen Benutzer stand, dass neue Benutzer das Passwort `Welcome2023!` bekommen.
 
-![[Screenshot_Keeper_5.png]]
+<img src="../Screenshots/Screenshot_Keeper_5.png" width=800>
 
-![[Screenshot_Keeper_6.png]]
+<img src="../Screenshots/Screenshot_Keeper_6.png" width=800>
 
 Nach dem Anmelden über ssh bekommen wir unsere erste flag:
 ```bash
@@ -94,18 +93,19 @@ python3 keepass_dump.py -f DUMP_FILE
 
 ```
 
-![[Screenshot_Keeper_7.png]]
+<img src="../Screenshots/Screenshot_Keeper_7.png" width=800>
 
 Das Passwort lautet also: `__dgr_d med fl_de` 
 Mein erster Gedanke war, dass das Erraten des Passworts mit Hashcat eine ziemlich schwierige Aufgabe sein würde. Doch dann kam mir die Idee, noch einmal genauer auf die Landessprache zu schauen, die vorher beim Benutzer `lnorgaard` vermerkt war, und die mir zuerst nichts sagte. Ich kopierte den Text und fand heraus, dass es sich um Dänisch handelte, wie mir Google Translate bestätigte.
 
 Daraufhin entschied ich mich, ChatGPT um Rat zu fragen, ob es ein ähnliches dänisches Wort kannte. Vielleicht konnte es mir helfen, eine mögliche Verbindung zu finden:
-![[Screenshot_Keeper_8.png]]
 Google fand zwar kein `Bødgrød med fløde`, dazu aber `rødgrød med fløde`
+
+<img src="../Screenshots/Screenshot_Keeper_8.png" width=800>
 
 Dieses im KeepassXC eingetippt und es öffnete sich.
 
-![[Screenshot_Keeper_10.png]]
+<img src="../Screenshots/Screenshot_Keeper_9.png" width=800>
 
 Weiter zu root navigieren und das Passwort war `F4><3K0nd!`, dies sah nach einem Falschen Passwort aus, trotzdem wurde es versucht, ohne Erfolg.
 
