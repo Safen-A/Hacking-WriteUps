@@ -109,6 +109,9 @@ Dieses im KeepassXC eingetippt und es öffnete sich.
 
 Weiter zu root navigieren und das Passwort war `F4><3K0nd!`, dies sah nach einem Falschen Passwort aus, trotzdem wurde es versucht, ohne Erfolg.
 
+<img src="../Screenshots/Screenshot_Keeper_10.png" width=500>
+
+
 Wie wir sehen ist das eine PuTTY-User-Key-File. Nach einer Recherche müssen wir diese Notiz kopieren und in eine key.ppk Datei speichern. Dannach den folgenden Befehl eintippen `puttygen key.ppk -O private-openssh -o pem-key.pem`
 
 Aber Achtung, dies hat eine Weile gedauert, da Putty in APT in der Version 0.74 existiert (zum aktuellen Zeitpunkt), wir brauchen aber eine Version die größer als 0.75 ist, sonst bekommen wir eine Fehlermeldung.
@@ -141,7 +144,7 @@ cd <dir_with_ppk_key>
 puttygen key.ppk -O private-openssh -o pem-key.pem
 ```
 
-Die Output Datei `pem-key-pem` ist ein RSA Private Key 
+Die Output Datei `pem-key.pem` ist ein RSA Private Key 
 So, nun haben wir eine `pem-key.pem` Datei, wir melden uns nun via ssh als root an:
 ```bash
 ssh root@IP_ADRESS -i pem-key.pem
