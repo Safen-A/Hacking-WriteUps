@@ -1,8 +1,8 @@
 # Easy_BabyEncryption
 
 Die BabyEnryption Challenge ist eine sehr einfache Crypto Challenge. Hier zeige ich zwei Möglichkeiten diese zu lösen.
+<img src="../screenshots/Bildschirmfoto vom 2023-08-28 23-19-05.png" width=800>
 
-![[_Hackthebox/Challenges/screenshots/Bildschirmfoto vom 2023-08-28 23-19-05.png]]
 
 
 
@@ -98,12 +98,12 @@ HTB{l00k_47?????????????????????????????????_c0ngr475}
 Diese Verschlüsselung nennt man in der Kryptografie `Das affine Kryptosystem` 
 
 
-**Proposition**: Seien ![abinZmZ](https://latex.codecogs.com/png.image?\dpi{200}a,%20b%20\in%20\mathbb{Z}/m\mathbb{Z) und sein ![fZmZZmZ](https://latex.codecogs.com/png.image?\dpi{200}f:%20\mathbb{Z}/m\mathbb{Z}%20\to%20\mathbb{Z}/m\mathbb{Z})definiert durch ![eKaxb](https://latex.codecogs.com/png.image.latex?e_K%28x%29%20%3D%20%28ax%2Bb%29%20%5Cmod%20m) Die Abbildung f ist genau dann injektiv, wenn ![ggtam](https://latex.codecogs.com/png.image.latex?%5Ctext%7BggT%7D%28a%2Cm%29%20%3D%201) ist.
+**Proposition**: Seien ![abinZmZ](https://latex.codecogs.com/svg.image?\dpi{200}a,%20b%20\in%20\mathbb{Z}/m\mathbb{Z) und sein ![fZmZZmZ](https://latex.codecogs.com/svg.image?\dpi{200}f:%20\mathbb{Z}/m\mathbb{Z}%20\to%20\mathbb{Z}/m\mathbb{Z})definiert durch ![eKaxb](https://latex.codecogs.com/svg.image.latex?e_K%28x%29%20%3D%20%28ax%2Bb%29%20%5Cmod%20m) Die Abbildung f ist genau dann injektiv, wenn ![ggtam](https://latex.codecogs.com/svg.image.latex?%5Ctext%7BggT%7D%28a%2Cm%29%20%3D%201) ist.
 
 
 
 
-Es gibt also eine Abbildung die inverse zu unserer ist. Diese ist ![dKayb](https://latex.codecogs.com/png.image.latex?d_K%28y%29%20%3D%20a%5E%7B-1%7D%28y-b%29%20%5Cmod%20m).
+Es gibt also eine Abbildung die inverse zu unserer ist. Diese ist ![dKayb](https://latex.codecogs.com/svg.image.latex?d_K%28y%29%20%3D%20a%5E%7B-1%7D%28y-b%29%20%5Cmod%20m).
 
 Wir setzen also unsere Zahlen ein:
 
@@ -113,7 +113,7 @@ ggt(123,256) = 1
 
 Wir müssen also das multiplikative inverse von 123 in Z/256Z finden. Dies können wir mit dem erweiterten Euklidischen Algorithmus finden. Wir suchen nach einem Online Tool, das Tool ist https://de.planetcalc.com/3311/ 
 
-Aslo ist a^-1 = 179
+Also ist a^-1 = 179
 
 Wir setzen ein.
 
@@ -144,12 +144,3 @@ HTB{l00k_47?????????????????????????????????_c0ngr475}
 '''
 
 ```
-
-
-
-![abinZmZ](https://latex.codecogs.com/png.image?\dpi{200}a,%20b%20\in%20\mathbb{Z}/m\mathbb{Z)
-
-![fZmZZmZ](https://latex.codecogs.com/png.image?\dpi{200}f:%20\mathbb{Z}/m\mathbb{Z}%20\to%20\mathbb{Z}/m\mathbb{Z})
-![eKaxb](https://latex.codecogs.com/png.image.latex?e_K%28x%29%20%3D%20%28ax%2Bb%29%20%5Cmod%20m)
-![ggtam](https://latex.codecogs.com/png.image.latex?%5Ctext%7BggT%7D%28a%2Cm%29%20%3D%201)
-![dKayb](https://latex.codecogs.com/png.image.latex?d_K%28y%29%20%3D%20a%5E%7B-1%7D%28y-b%29%20%5Cmod%20m)
