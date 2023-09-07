@@ -84,7 +84,7 @@ scp -r lnorgaard@IP_ADRESS:/home/lnorgaard /home/parrot/Desktop/
 Die Situation erinnerte mich kürzlich an eine ähnliche Schwachstelle, die ich während des CTFs "Deutschlands Bester Hacker" gelöst hatte. In diesem Moment war mir klar, dass es sich um die Schwachstelle mit der Kennung (CVE-2023-32784) handeln musste.
 
 
-Also downloadete ich das Python Programm, dass es mir ermöglichte das Passwort mit Ausnahmen zu extrahieren und führte es aus wie folgt aus:
+Also downloadete ich das Python Programm, dass es mir ermöglichte das Passwort mit Ausnahmen zu extrahieren und führte es wie folgt aus:
 
 ```bash
 git clone https://github.com/z-jxy/keepass_dump.git
