@@ -35,7 +35,8 @@ Hier ist eine Zusammenfassung der offenen Ports, die während des Nmap-Scans ent
 Nach der Identifizierung der offenen Ports wurde ein Webbrowser geöffnet, um die erreichbaren Webseiten zu erkunden. Dabei wurde festgestellt, dass es einen Verweis auf `tickets.keeper.htb/rt` gibt. Um darauf zuzugreifen, wurde die Datei `/etc/hosts` bearbeitet:
 
 ```bash
-sudo echo "IP_ADRESS    tickets.keeper.htb" > /etc/hosts
+sudo su
+echo "IP_ADRESS    tickets.keeper.htb" > /etc/hosts
 ```
 
 <img src="../Screenshots/Screenshot_Keeper_3.png" width=800>
