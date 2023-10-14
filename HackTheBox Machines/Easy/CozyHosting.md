@@ -7,7 +7,7 @@
 
 CozyHosting ist eine saisonale Maschine, die während der Open Beta Season II präsentiert wurde. Sie wurde am 05. September 2023 offiziell veröffentlicht.
 
-<img src="../Screenshot_CozyHosting_1.png" width=800>
+<img src="../Screenshots/Screenshot_CozyHosting_1.png" width=800>
 
 ## Reconnaissance
 
@@ -43,7 +43,7 @@ sudo su
 echo "IP_ADRESS    cozyhosting.htb" >> /etc/hosts
 ```
 
-<img src="../Screenshot_CozyHosting_2.png" width=800>
+<img src="../Screenshots/Screenshot_CozyHosting_2.png" width=800>
 
 
 Ich führte einen `dirsearch`-Scan durch, um versteckte Pfade auf der Website `http://cozyhosting.htb/` zu identifizieren:
@@ -75,9 +75,9 @@ Unter den Einträgen fiel mir ein besonders interessanter Pfad auf: `cozyhosting
 Um die Bedeutung dieser SessionID weiter zu untersuchen, versuchte ich mich über `cozyhosting.htb/login` mit dem Benutzernamen `kanderson` und dem Passwort `password` anzumelden. Während des Anmeldevorgangs nutzte ich BurpSuite, um den Traffic abzufangen.
 
 Interessanterweise stellte ich fest, dass nach dem Verändern der Session ID im BurpSuite die Authentifizierung erfolgreich war, und ich erhielt Admin-Rechte. Dies deutete auf eine Schwachstelle in der Session-Verwaltung der Website hin, die mir den uneingeschränkten Admin Zugang ermöglichte.
-<img src="../Screenshot_CozyHosting_3.png" width=800>
+<img src="../Screenshots/Screenshot_CozyHosting_3.png" width=800>
 
-<img src="../Screenshot_CozyHosting_4.png" width=800>
+<img src="../Screenshots/Screenshot_CozyHosting_4.png" width=800>
 
 
 Während meiner Untersuchung stieß ich auf eine Eingabemöglichkeit, die direkte Shell-Ausführung erlaubte. Mein nächster Schritt war also, eine Reverse Shell einzurichten.
