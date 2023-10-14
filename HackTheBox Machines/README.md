@@ -1,6 +1,9 @@
 # HackTheBox Machines
 
 In diesem Repository veröffentliche ich meine Writeups zu den HacktheBox-Maschinen. Jede Box ist mit dem entsprechenden Datum versehen, an dem ich sie erfolfreich bearbeitet habe.
+
+## Easy Boxen
+
 | Box-Name             | Datum des Exploits      |
 |----------------------|-------------------------|
 | [Keeper](https://github.com/Safen-A/Hacking-WriteUps/blob/main/HackTheBox%20Machines/Easy/Keeper.md)           | 20. August 2023    |
