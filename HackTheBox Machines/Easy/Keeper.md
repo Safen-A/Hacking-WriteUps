@@ -5,7 +5,7 @@
 Keeper ist eine Saisonale Maschine die in der Open Beta Season II gespielt wurde. Keeper wurde am 12. August 2023 veröffentlicht. 
 
 > OS : Linux
-> Points: 20
+> Points: 30
 
 <img src="../Screenshots/Screenshot_Keeper_1.png" width=800>
 
