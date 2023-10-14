@@ -1,7 +1,7 @@
 # Easy_BabyEncryption
 
 Die BabyEnryption Challenge ist eine sehr einfache Crypto Challenge. Hier zeige ich zwei Möglichkeiten diese zu lösen.
-<img src="../screenshots/Bildschirmfoto vom 2023-08-28 23-19-05.png" width=800>
+<img src="../screenshots/BabyEncryptionFlag.png" width=800>
 
 
 
