@@ -3,7 +3,7 @@
 ## Overview
 
 > OS : Linux
-> Points: 20
+> Points: 30
 
 CozyHosting ist eine saisonale Maschine, die während der Open Beta Season II präsentiert wurde. Sie wurde am 05. September 2023 offiziell veröffentlicht.
 
