@@ -5,7 +5,7 @@
 > OS : Linux
 > Points: 30
 
-Analytics ist eine saisonale Maschine, die während der Open Beta Season II präsentiert wurde. Sie wurde am 07. Oktober 2023 offiziell veröffentlicht.
+Analytics ist eine saisonale Maschine, die während der Open Beta Season III präsentiert wurde. Sie wurde am 07. Oktober 2023 offiziell veröffentlicht.
 
 <img src="../Screenshots/Screenshot_Analytics_1.png" width=800>
 
