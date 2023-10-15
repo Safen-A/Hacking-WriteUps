@@ -16,20 +16,20 @@ Wir fangen mit einem nmap Scan an
 ```shell
 sudo nmap -p- -sC -sV -O IP_ADRESS
 
-PORT   STATE SERVICE VERSION
-22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.4 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey: 
-|   256 3eea454bc5d16d6fe2d4d13b0a3da94f (ECDSA)
-|_  256 64cc75de4ae6a5b473eb3f1bcfb4e394 (ED25519)
-80/tcp open  http    nginx 1.18.0 (Ubuntu)
-|_http-server-header: nginx/1.18.0 (Ubuntu)
-|_http-title: Did not follow redirect to http://analytical.htb/
-Device type: general purpose
-Running: Linux 5.X
-OS CPE: cpe:/o:linux:linux_kernel:5.0
-OS details: Linux 5.0
-Network Distance: 2 hops
-Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+#PORT   STATE SERVICE VERSION
+#22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+#| ssh-hostkey: 
+#|   256 3eea454bc5d16d6fe2d4d13b0a3da94f (ECDSA)
+#|_  256 64cc75de4ae6a5b473eb3f1bcfb4e394 (ED25519)
+#80/tcp open  http    nginx 1.18.0 (Ubuntu)
+#|_http-server-header: nginx/1.18.0 (Ubuntu)
+#|_http-title: Did not follow redirect to http://analytical.htb/
+#Device type: general purpose
+#Running: Linux 5.X
+#OS CPE: cpe:/o:linux:linux_kernel:5.0
+#OS details: Linux 5.0
+#Network Distance: 2 hops
+#Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 ```
 
