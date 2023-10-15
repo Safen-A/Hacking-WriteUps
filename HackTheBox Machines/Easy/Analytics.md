@@ -35,7 +35,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 ## Schritt 2: Initialer Zugang durch Hosts-Datei-Manipulation
 
-Beim Öffnen des Webbrowsers bemerkte ich sofort eine Weiterleitung zu `analytical.htb`. Um diese Subdomain zu erreichen, musste ich zunächst die `/etc/hosts`-Datei auf meinem System bearbeiten, um die IP-Adresse der Maschine auf `analytical.htb` zu verweisen. Dies ermöglichte mir den Zugriff auf die Webanwendung, die auf der Subdomain gehostet wurde.
+Beim Öffnen des Webbrowsers bemerkte ich sofort eine Weiterleitung zu `analytical.htb`. Um diese domain zu erreichen, musste ich zunächst die `/etc/hosts`-Datei auf meinem System bearbeiten, um die IP-Adresse der Maschine auf `analytical.htb` zu verweisen. Dies ermöglichte mir den Zugriff auf die Webanwendung
 
 ```shell
 sudo su
@@ -80,12 +80,12 @@ python3 main.py -u http://data.analytical.htb -t 249fa03d-fd94-4d5b-b94f-b4ebf3d
 
 <img src="../Screenshots/Screenshot_Analytics_4.png" width=800>
 
-Nach erfolgreicher Ausnutzung des Metabase-Exploits erlangte ich Zugang zum System als Metabase-Benutzer. Beim Untersuchen des Systems stieß ich auf die Zugangsdaten für den Benutzer `metalytics`:
+Nach erfolgreicher Ausnutzung des Metabase-Exploits erlangte ich Zugang zum System als Metabase-Benutzer. Beim Untersuchen des Systems stieß ich auf die SSH-Zugangsdaten für den Benutzer `metalytics`:
 
 - **Benutzername:** `metalytics`
 - **Passwort:** `An4lytics_ds20223#`
 
-Nach dieser Entdeckung begann die Suche nach einer Möglichkeit zur Privilege Escalation. Diese Suche dauerte einige Zeit, da ich es anspruchsvoller empfand, bis ich auf den folgenden Exploit stieß:
+Nach dieser Entdeckung begann die Suche nach einer Möglichkeit zur Privilege Escalation. Diese Suche dauerte einige Zeit, da ich dies anspruchsvoller war als gedacht, bis ich auf den folgenden Exploit stieß:
 
 <img src="../Screenshots/Screenshot_Analytics_5.png" width=800>
 
