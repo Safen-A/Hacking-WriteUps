@@ -8,8 +8,7 @@ In diesem Repository veröffentliche ich meine Writeups zu den HacktheBox-Challe
 | Box-Name             | Typ    | Datum |
 |----------------------|-------------------------|----------------------|
 | [Easy_BabyEncryption](https://github.com/Safen-A/Hacking-WriteUps/blob/main/HackTheBox%20Challenges/Crypto/Easy_BabyEncryption.md)     |  Crypto     | 29. August 2023    |
-
-
+| [Easy_The_Last_Dance](https://github.com/Safen-A/Hacking-WriteUps/blob/main/HackTheBox%20Challenges/Crypto/Easy_The_Last_Dance.md)     |  Crypto     | 19. Oktober 2023    |
 
 
 
